@@ -1,10 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useState } from "react";
 
-import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 
-import { Tooltip, Grow } from "@mui/material";
+import { Grow, Tooltip } from "@mui/material";
 
 import {
     BarChartOutlined,
