@@ -27,8 +27,9 @@ const Signup = () => {
       if (response.ok) {
         localStorage.setItem("token", data.token);
         setMessage("Signup successful! Redirecting...");
+        
         setTimeout(() => {
-          navigate("/dashboard"); // Redirect within React app
+          window.location.href = "http://localhost:3001";
         }, 1000);
       } else {
         setMessage(data.message || "Signup failed!");
@@ -40,101 +41,99 @@ const Signup = () => {
     }
   };
 
-  // ✅ Fake signup logic for testing
-  const handleSignup = (e) => {
-    e.preventDefault();
-    localStorage.setItem("token", "your_fake_jwt_token");
-    window.location.href = "http://localhost:3001"; // ✅ Redirect to the external dashboard project
-  };
-
   return (
-    <div style={styles.container}>
-      <h2 style={styles.header}>Signup</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required style={styles.input} />
-        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required style={styles.input} />
-        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required style={styles.input} />
-        <button type="submit" style={styles.button} disabled={loading}>
-          {loading ? "Signing up..." : "Signup"}
-        </button>
-      </form>
-      <button onClick={handleSignup} style={styles.fakeSignupButton}>
-        Fake Signup & Redirect
-      </button>
-      {message && <p style={styles.message}>{message}</p>}
-      <p style={styles.loginLink}>
-        Already have an account? <Link to="/login" style={styles.link}>Login</Link>
-      </p>
+    <div style={styles.background}>
+      <div style={styles.container}>
+        <h2 style={styles.header}>Create an Account</h2>
+        <form onSubmit={handleSubmit} style={styles.form}>
+          <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required style={styles.input} />
+          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required style={styles.input} />
+          <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required style={styles.input} />
+          <button type="submit" style={styles.button} disabled={loading}>
+            {loading ? "Signing up..." : "Signup"}
+          </button>
+        </form>
+        {message && <p style={styles.message}>{message}</p>}
+        <p style={styles.loginLink}>
+          Already have an account? <Link to="/login" style={styles.link}>Login</Link>
+        </p>
+      </div>
     </div>
   );
 };
 
 const styles = {
-  container: {
+  background: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    backgroundColor: "#f0f2f5",
+    background: "linear-gradient(135deg, rgba(2, 14, 23, 0.9), rgba(194, 158, 87, 0.95)), url('https://source.unsplash.com/1600x900/?technology')",
+    backgroundSize: "cover",
+    backdropFilter: "blur(10px)",
+  },
+  container: {
+    width: "400px",
+    padding: "30px",
+    borderRadius: "12px",
+    background: "rgba(255, 255, 255, 0.15)",
+    backdropFilter: "blur(12px)",
+    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+    textAlign: "center",
+    animation: "fadeIn 1s ease-in-out",
   },
   header: {
+    color: "#ffffff",
+    fontSize: "28px",
     marginBottom: "20px",
-    fontSize: "32px",
-    color: "#333",
   },
   form: {
     display: "flex",
     flexDirection: "column",
-    width: "350px",
-    padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
-    backgroundColor: "#fff",
   },
   input: {
-    marginBottom: "15px",
+    marginBottom: "12px",
     padding: "12px",
     fontSize: "16px",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
+    borderRadius: "6px",
+    border: "none",
+    background: "rgba(255,255,255,0.2)",
+    color: "#fff",
+    outline: "none",
+    transition: "0.3s ease",
+  },
+  inputFocus: {
+    background: "rgba(255,255,255,0.3)",
   },
   button: {
     padding: "12px",
     fontSize: "18px",
-    borderRadius: "5px",
+    borderRadius: "6px",
     border: "none",
     backgroundColor: "#007bff",
     color: "#fff",
     cursor: "pointer",
-    transition: "background 0.3s",
-    marginBottom: "10px",
+    transition: "0.3s",
   },
-  fakeSignupButton: {
-    padding: "12px",
-    fontSize: "16px",
-    borderRadius: "5px",
-    border: "none",
-    backgroundColor: "#28a745",
-    color: "#fff",
-    cursor: "pointer",
-    transition: "background 0.3s",
-    marginBottom: "15px",
+  buttonHover: {
+    backgroundColor: "#0056b3",
   },
   message: {
     marginTop: "15px",
     fontSize: "16px",
-    color: "#d9534f",
+    color: "#ffcc00",
   },
   loginLink: {
     marginTop: "15px",
-    fontSize: "14px",
-    color: "#333",
+    fontSize: "16px",
+    color: "#fff",
   },
   link: {
-    color: "#007bff",
+    color: "#ffcc00",
     textDecoration: "none",
   },
 };
 
 export default Signup;
+
+

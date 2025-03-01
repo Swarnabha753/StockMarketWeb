@@ -31,4 +31,32 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+// ✅ Login Route
+router.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Find user by email
+    const user = await UserModel.findOne({ email });
+    if (!user) return res.status(401).json({ message: "Invalid email or password" });
+
+    // Compare password
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) return res.status(401).json({ message: "Invalid email or password" });
+
+    // Generate token
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+    res.json({ message: "Login successful", token });
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).json({ message: "Login failed", error });
+  }
+});
+
+// ✅ Logout Route (Handled on Frontend)
+router.post("/logout", (req, res) => {
+  res.json({ message: "Logout successful" });
+});
+
 module.exports = router;
