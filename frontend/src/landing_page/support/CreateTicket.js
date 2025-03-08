@@ -33,7 +33,7 @@ function CreateTicket() {
         </div>
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Your Zerodha Account
+          <i class="fa fa-user-o" aria-hidden="true"></i> Your Zerodha Account
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
           Your Profile
@@ -58,7 +58,7 @@ function CreateTicket() {
         </div>
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Kite
+          <i class="fa fa-bar-chart" aria-hidden="true"></i> Kite
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
           IPO
@@ -87,7 +87,7 @@ function CreateTicket() {
         </div>
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Funds
+          <i class="fa fa-suitcase" aria-hidden="true"></i> Funds
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
           Add money
@@ -109,7 +109,7 @@ function CreateTicket() {
         </div>
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Console
+          <i class="fa fa-user-circle" aria-hidden="true"></i> Console
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
           Portfolio
@@ -138,7 +138,7 @@ function CreateTicket() {
         </div>
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Coin
+          <i class="fa fa-circle-o-notch" aria-hidden="true"></i> Coin
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
           Understanding mutual funds and Coin

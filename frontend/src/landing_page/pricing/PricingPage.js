@@ -1,6 +1,6 @@
 import React from "react";
 
-function Hero() {
+function PricingPage() {
   return (
     <div className="container">
       <div className="row p-5 mt-5 border-bottom text-center">
@@ -39,4 +39,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default PricingPage;
