@@ -15,7 +15,13 @@ const url = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+    origin: ["https://stock-market-web-kappa.vercel.app", "https://stock-market-webb.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(bodyParser.json());
 
 app.use("/api/auth", authRoutes);

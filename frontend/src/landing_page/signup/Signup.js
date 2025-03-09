@@ -17,7 +17,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3002/api/auth/signup", {
+      const response = await fetch("${process.env.REACT_APP_API_URL}/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -29,7 +29,7 @@ const Signup = () => {
         setMessage("Signup successful! Redirecting...");
         
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://stock-market-webb.vercel.app";
         }, 1000);
       } else {
         setMessage(data.message || "Signup failed!");

@@ -18,7 +18,7 @@ const Menu = () => {
     const handleLogout = () => {
     localStorage.removeItem("token"); // Clear user session
     setTimeout(() => {
-        window.location.href = "http://localhost:3000"; // Redirect to Landing Page
+        window.location.href = "https://stock-market-web-kappa.vercel.app"; // Redirect to Landing Page
     }, 1000); 
 };
 
