@@ -19,7 +19,7 @@
             "theme_color": "#000000",
             "background_color": "#ffffff"
         }, {
-            "src": "logo512.png",
+            "src": "./logo512.png",
             "type": "image/png",
             "sizes": "512x512"
         }
