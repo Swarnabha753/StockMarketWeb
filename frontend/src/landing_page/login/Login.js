@@ -98,7 +98,7 @@ const styles = {
       borderRadius: "6px",
       border: "none",
       background: "rgba(255,255,255,0.7)",
-      color: "#fff",
+      color: "#000",
       outline: "none",
       transition: "0.3s ease",
     },
