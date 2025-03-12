@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [formData, setFormData] = useState({ username: "", email: "", password: "" });
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -68,7 +68,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    background: "linear-gradient(135deg, rgba(2, 14, 23, 0.9), rgba(194, 158, 87, 0.95)), url('https://source.unsplash.com/1600x900/?technology')",
+    background: "linear-gradient(135deg, rgba(247, 247, 247, 0.9), rgba(198, 198, 198, 0.9)), url('https://source.unsplash.com/1600x900/?technology')",
     backgroundSize: "cover",
     backdropFilter: "blur(10px)",
   },
@@ -76,7 +76,7 @@ const styles = {
     width: "400px",
     padding: "30px",
     borderRadius: "12px",
-    background: "rgba(255, 255, 255, 0.15)",
+    background: "rgba(209, 202, 202, 0.95)",
     backdropFilter: "blur(12px)",
     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
     textAlign: "center",
@@ -97,13 +97,13 @@ const styles = {
     fontSize: "16px",
     borderRadius: "6px",
     border: "none",
-    background: "rgba(255,255,255,0.2)",
+    background: "rgba(255,255,255,0.7)",
     color: "#fff",
     outline: "none",
     transition: "0.3s ease",
   },
   inputFocus: {
-    background: "rgba(255,255,255,0.3)",
+    background: "rgba(255,255,255,0.8)",
   },
   button: {
     padding: "12px",
@@ -116,20 +116,20 @@ const styles = {
     transition: "0.3s",
   },
   buttonHover: {
-    backgroundColor: "#0056b3",
+    backgroundColor: "#003451",
   },
   message: {
     marginTop: "15px",
     fontSize: "16px",
-    color: "#ffcc00",
+    color: "#000",
   },
   loginLink: {
     marginTop: "15px",
     fontSize: "16px",
-    color: "#fff",
+    color: "#000",
   },
   link: {
-    color: "#ffcc00",
+    color: "#007bff",
     textDecoration: "none",
   },
 };
