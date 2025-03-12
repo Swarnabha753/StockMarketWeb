@@ -103,7 +103,7 @@ const styles = {
     transition: "0.3s ease",
   },
   inputFocus: {
-    background: "rgba(255,255,255,0.8)",
+    background: "#000",
   },
   button: {
     padding: "12px",
