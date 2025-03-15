@@ -156,8 +156,7 @@ This project is **open-source** and available under the **MIT License**.
 
 ## 📬 Contact  
 For queries or collaborations:  
-📧 Email: **nandiswarnabha@gmail.com**  
-📌 LinkedIn: [Your Profile](www.linkedin.com/in/swarnabha-nandi)  
+📧 Email: **nandiswarnabha@gmail.com** 
 
 ---
 
