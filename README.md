@@ -115,10 +115,10 @@ npm start
 ## 📸 Screenshots  
 
 ### 🔥 **Homepage**  
-![Homepage](https://your_homepage_screenshot_url)  
+![Homepage](./frontend/public/media/images/frontend.png)  
 
 ### 📊 **Dashboard**  
-![Dashboard](https://your_dashboard_screenshot_url)  
+![Dashboard](./dashboard/public/dashboard.png)  
 
 ---
 
