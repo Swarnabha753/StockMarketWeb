@@ -31,7 +31,7 @@ router.post("/signup", async(req, res) => {
     }
 });
 
-
+// Login Route
 router.post("/login", async(req, res) => {
     try {
         const { email, password } = req.body;
@@ -54,7 +54,7 @@ router.post("/login", async(req, res) => {
     }
 });
 
-
+//Logout Route
 router.post("/logout", (req, res) => {
     res.json({ message: "User logged out successfully" });
 });
