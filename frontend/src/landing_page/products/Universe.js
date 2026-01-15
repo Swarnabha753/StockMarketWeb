@@ -63,12 +63,12 @@ function Universe() {
                     </div>
                 ))}
 
-                {/* CTA Button */}
-                <div className="col-12">
-                    <button style={styles.button}>
-                        Signup Now
-                    </button>
-                </div>
+                // {/* CTA Button */}
+                // <div className="col-12">
+                //     <button style={styles.button}>
+                //         Signup Now
+                //     </button>
+                // </div>
 
             </div>
         </div>
